@@ -1,4 +1,5 @@
 import { GridBackground } from '@/components/shared/GridBackground'
+import { Meteor } from '@/components/shared/Meteor'
 
 export default function Home() {
   return (
@@ -11,6 +12,10 @@ export default function Home() {
           <div className="absolute inset-0"></div>
 
           <GridBackground />
+
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <Meteor number={20} />
+          </div>
         </section>
       </main>
     </>
