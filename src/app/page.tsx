@@ -1,8 +1,12 @@
 import { GridBackground } from '@/components/shared/GridBackground'
 import { Meteor } from '@/components/shared/Meteor'
 import { SparkText } from '@/components/shared/SparkText'
+import { FlipWords } from '@/components/shared/FlipWords'
 
 export default function Home() {
+  const words = [
+    'Frontend Developer & UI/UX Enthusiast',
+  ]
   return (
     <>
       <main className="bg-[#020617] text-white min-h-screen">
@@ -42,6 +46,16 @@ export default function Home() {
                   </span>
                 </h1>
                 <div className="absolute -z-10 top-1/2 -translate-y-1/2 left-1/4 w-24 sm:w-32 h-24 sm:h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
+              </div>
+
+              <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s">
+                <i className="fas fa-rocket text-blue-400 animate-bounce text-sm sm:text-base"></i>
+                <span>
+                  <FlipWords
+                    className={'text-lg sm:text-xl text-blue-400 font-medium'}
+                    words={words}
+                  />
+                </span>
               </div>
             </div>
           </div>
