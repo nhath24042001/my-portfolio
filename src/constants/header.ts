@@ -12,7 +12,7 @@ export const NAV_LIST = [
         id: 'skills',
         icon: Code,
         text: 'Skills',
-        path: '/skills',
+        path: '/skill',
     },
     {
         id: 'experience',
@@ -30,7 +30,7 @@ export const NAV_LIST = [
         id: 'projects',
         icon: FolderGit2,
         text: 'Projects',
-        path: '/projects'
+        path: '/project'
     },
     {
         id: 'contact',
