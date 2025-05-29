@@ -2,6 +2,7 @@ import { GridBackground } from '@/components/shared/GridBackground'
 import { Meteor } from '@/components/shared/Meteor'
 import { SparkText } from '@/components/shared/SparkText'
 import { FlipWords } from '@/components/shared/FlipWords'
+import { PrismCode } from '@/components/shared/PrismCode'
 
 export default function Home() {
   const words = ['Frontend Developer & UI/UX Enthusiast']
@@ -106,6 +107,8 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          <PrismCode />          
         </section>
       </main>
     </>
