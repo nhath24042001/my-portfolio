@@ -1,31 +1,28 @@
 'use client'
 
 import { cn } from '@/lib/utils'
+import { MeteorStyle } from '@/types/common'
+import { MeteorProps } from '@/types/props'
 import { useEffect, useState } from 'react'
 
-type MeteorStyle = {
-  top: number
-  left: string
-  animationDelay: string
-  animationDuration: string
-}
+const generateMeteorStyle = (): MeteorStyle => ({
+  top: -5,
+  left: `${Math.floor(Math.random() * window.innerWidth)}px`,
+  animationDelay: `${(Math.random() * 1 + 0.2).toFixed(2)}s`,
+  animationDuration: `${Math.floor(Math.random() * 8 + 2)}s`,
+})
 
-export const Meteor = ({ number }: { number: number }) => {
+export const Meteor = ({ number }: MeteorProps) => {
   const [meteorStyles, setMeteorStyles] = useState<MeteorStyle[]>([])
 
   useEffect(() => {
-    const styles = [...new Array(number)].map(() => ({
-      top: -5,
-      left: Math.floor(Math.random() * window.innerWidth) + 'px',
-      animationDelay: Math.random() * 1 + 0.2 + 's',
-      animationDuration: Math.floor(Math.random() * 8 + 2) + 's',
-    }))
+    const styles = Array.from({ length: number }, generateMeteorStyle)
     setMeteorStyles(styles)
   }, [number])
 
   return (
     <>
-      {[...meteorStyles].map((style, idx) => (
+      {meteorStyles.map((style, idx) => (
         <span
           key={idx}
           className={cn(

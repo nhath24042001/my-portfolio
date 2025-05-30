@@ -1,8 +1,8 @@
-import { GridBackground } from '@/components/shared/GridBackground'
-import { Meteor } from '@/components/shared/Meteor'
-import { SparkText } from '@/components/shared/SparkText'
-import { FlipWords } from '@/components/shared/FlipWords'
-import { PrismCode } from '@/components/shared/PrismCode'
+import { GridBackground } from '@/components/pages/home/GridBackground'
+import { Meteor } from '@/components/pages/home/Meteor'
+import { SparkText } from '@/components/pages/home/SparkText'
+import { FlipWords } from '@/components/pages/home/FlipWords'
+import { PrismCode } from '@/components/pages/home/PrismCode'
 
 const badgeItems = [
   {

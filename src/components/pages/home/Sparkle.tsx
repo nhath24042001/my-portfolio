@@ -1,13 +1,5 @@
+import { SparkleProps } from '@/types/props'
 import { motion } from 'framer-motion'
-
-interface SparkleProps {
-  id: string
-  x: string
-  y: string
-  color: string
-  delay?: number
-  scale?: number
-}
 
 export const Sparkle = ({
   id,
