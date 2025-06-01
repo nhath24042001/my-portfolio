@@ -1,8 +1,8 @@
-import { GridBackground } from '@/components/pages/home/GridBackground'
-import { Meteor } from '@/components/pages/home/Meteor'
-import { SparkText } from '@/components/pages/home/SparkText'
-import { FlipWords } from '@/components/pages/home/FlipWords'
-import { PrismCode } from '@/components/pages/home/PrismCode'
+import { GridBackground } from '@/components/shared/GridBackground'
+import { Meteor } from '@/components/shared/Meteor'
+import { SparkText } from '@/components/shared/SparkText'
+import { FlipWords } from '@/components/shared/FlipWords'
+import { PrismCode } from '@/components/shared/PrismCode'
 
 const badgeItems = [
   {
@@ -45,14 +45,14 @@ export default function Home() {
 
   return (
     <main className="bg-[#020617] text-white min-h-screen">
-      <section className="hero-section-padding relative flex min-h-screen items-center justify-center px-4 py-10 sm:px-6 md:py-16 lg:px-8 lg:py-0">
+      <section className="--hero-section-padding relative flex min-h-screen items-center justify-center px-4 py-10 sm:px-6 md:py-16 lg:px-8 lg:py-0">
         <GridBackground />
 
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <Meteor number={20} />
         </div>
 
-        <div className="container relative z-10 mx-auto flex flex-col items-center justify-between py-8 md:py-10 lg:flex-row lg:py-12 md:pt-28 xl:pt-28">
+        <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 py-8 md:py-10 lg:py-12 md:pt-28 xl:pt-28">
           <div className="relative mb-12 w-full animate__animated animate__fadeInLeft lg:mb-0 lg:w-1/2">
             <BackgroundCircles />
             <WelcomeBadge />
@@ -62,9 +62,10 @@ export default function Home() {
             <ActionButtons />
             <FloatingBadges />
           </div>
+          
+          <PrismCode />
         </div>
 
-        <PrismCode />
       </section>
     </main>
   )
@@ -159,11 +160,10 @@ function ActionButton({
 }) {
   const baseStyle =
     'group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl transition-all duration-300 hover:scale-105'
-  const innerStyle = `block w-full rounded-[11px] px-6 py-3 sm:px-8 sm:py-4 transition-all duration-300 ${
-    border
+  const innerStyle = `block w-full rounded-[11px] px-6 py-3 sm:px-8 sm:py-4 transition-all duration-300 ${border
       ? 'bg-gray-900 border border-gray-700/50 group-hover:bg-gradient-to-r'
       : 'bg-gray-900 group-hover:bg-gradient-to-r'
-  } group-hover:from-${gradient.split(' ')[0]} group-hover:to-${gradient.split(' ')[1]}`
+    } group-hover:from-${gradient.split(' ')[0]} group-hover:to-${gradient.split(' ')[1]}`
 
   return (
     <a
@@ -172,9 +172,8 @@ function ActionButton({
     >
       <span className={innerStyle}>
         <span
-          className={`relative flex items-center justify-center gap-2 font-medium ${
-            border ? 'text-gray-300 group-hover:text-white' : 'text-white'
-          }`}
+          className={`relative flex items-center justify-center gap-2 font-medium ${border ? 'text-gray-300 group-hover:text-white' : 'text-white'
+            }`}
         >
           <span>{text}</span>
           <i className={`fas ${icon} transform transition-all duration-300`} />

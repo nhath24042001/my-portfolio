@@ -231,6 +231,20 @@ pre[class*='language-'] {
   opacity: 0.8; /* Make it more visible */
 }
 
+.--hero-section-padding {
+  padding-top: 12rem !important;
+}
+
+.--animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+.--bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(100, 100, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(100, 100, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
 @keyframes gridPulse {
   0%,
   100% {
@@ -304,5 +318,14 @@ pre[class*='language-'] {
   }
   50% {
     opacity: 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
