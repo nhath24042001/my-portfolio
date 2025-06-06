@@ -1,0 +1,1 @@
+type CursorEvent = MouseEvent | TouchEvent;

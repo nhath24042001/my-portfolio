@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import AnimatedBackground from "@/components/shared/AnimatedBackground";
 import Header from "@/components/shared/Header";
+import CustomCursor from "@/components/shared/CustomCursor";
 
 export const metadata: Metadata = {
   title: "Nhat Huy - Portfolio",
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AnimatedBackground />
+        <CustomCursor />
         <Header />
         {children}
       </body>

@@ -126,4 +126,5 @@ body {
   padding: 0;
   overflow: hidden;
   background-color: black;
+  cursor: none;
 }
