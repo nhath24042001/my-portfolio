@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import AnimatedBackground from "@/components/shared/AnimatedBackground";
+import Header from "@/components/shared/Header";
 
 export const metadata: Metadata = {
   title: "Nhat Huy - Portfolio",
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AnimatedBackground />
+        <Header />
         {children}
       </body>
     </html>

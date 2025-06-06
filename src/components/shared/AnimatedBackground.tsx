@@ -1,52 +1,88 @@
-'use client'
+'use client';
 
-import React, { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import Image from 'next/image'
-
-const NUM_CIRCLES = 20
+import { useEffect, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 export default function AnimatedBackground() {
-  // Mảng lưu ref các circle
-  const circlesRef = useRef<(SVGCircleElement | null)[]>([])
+  const [init, setInit] = useState(false);
 
   useEffect(() => {
-    // Khởi tạo vị trí và bán kính cho các vòng tròn
-    circlesRef.current.forEach((circle) => {
-      if (!circle) return
-      const cx = Math.random() * window.innerWidth
-      const cy = Math.random() * window.innerHeight
-      const r = 10 + Math.random() * 20
-      circle.setAttribute('cx', cx.toString())
-      circle.setAttribute('cy', cy.toString())
-      circle.setAttribute('r', r.toString())
-      circle.style.opacity = (0.2 + Math.random() * 0.4).toString()
-    })
-
-    const handleMouseMove = (e: MouseEvent) => {
-      const mouseX = e.clientX
-      const mouseY = e.clientY
-
-      circlesRef.current.forEach((circle, i) => {
-        if (!circle) return
-        const factor = (i + 1) / circlesRef.current.length
-        const targetX = mouseX * factor + (Math.random() * 50 - 25)
-        const targetY = mouseY * factor + (Math.random() * 50 - 25)
-
-        // Dùng gsap animate cx và cy
-        gsap.to(circle, {
-          attr: { cx: targetX, cy: targetY },
-          duration: 0.6,
-          ease: 'power3.out',
-        })
-      })
-    }
-
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
 
   return (
-    
-  )
+    init && (
+      <Particles
+        id="tsparticles"
+        options={{
+          background: {
+            color: {
+              value: "#3D3D3D",
+            },
+          },
+          fpsLimit: 120,
+          interactivity: {
+            events: {
+              onClick: {
+                enable: true,
+                mode: "push",
+              },
+              onHover: {
+                enable: true,
+                mode: "repulse",
+              },
+              resize: {
+                enable: true,
+              }
+            },
+            modes: {
+              push: {
+                quantity: 4,
+              },
+              repulse: {
+                distance: 200,
+                duration: 0.4,
+              },
+            },
+          },
+          particles: {
+            color: {
+              value: "#F2AE66",
+            },
+            move: {
+              direction: "none",
+              enable: true,
+              outModes: {
+                default: "bounce",
+              },
+              random: false,
+              speed: 6,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+              },
+              value: 80,
+            },
+            opacity: {
+              value: 0.5,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              value: { min: 1, max: 5 },
+            },
+          },
+          detectRetina: true,
+        }}
+      />
+    )
+  );
 }
