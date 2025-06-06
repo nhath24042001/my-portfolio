@@ -28,7 +28,7 @@ export default function Hero() {
         >
             <h1 className="--hero-line text-3xl md:text-5xl font-bold transform transition-transform duration-300 hover:scale-105 cursor-pointer">
                 Hi, I’m <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-cyan-400 to-teal-400 drop-shadow-[0_2px_1px_rgba(0,0,0,0.6)]">
+                <span className="text-transparent bg-clip-text bg-[#FB7C6D] drop-shadow-[0_2px_1px_rgba(0,0,0,0.6)]">
                     Nhat Huy
                 </span>
             </h1>
