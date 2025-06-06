@@ -18,7 +18,7 @@ export default function Header() {
     return (
         <header
             ref={headerRef}
-            className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md py-4 px-6"
+            className="sticky top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md py-4 px-6"
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 <h1 className="text-xl font-bold text-white">nhath.dev</h1>
