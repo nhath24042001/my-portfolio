@@ -79,10 +79,7 @@ export default function Hero() {
                 <TechStack />
             </div>
 
-            <div id="scroll-btn" className='flex flex-col'>
-                <button className='text-md'>Scroll To Explore</button>
-                <button>↓</button>
-            </div>
+            <button id="scroll-btn">Scroll To Explore</button>
         </section>
     )
 }
