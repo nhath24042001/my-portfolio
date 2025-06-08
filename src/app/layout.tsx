@@ -2,9 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google'
 
-import AnimatedBackground from "@/components/shared/AnimatedBackground";
 import Header from "@/components/shared/Header";
-import CustomCursor from "@/components/shared/CustomCursor";
 
 export const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
@@ -21,8 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <AnimatedBackground />
-        <CustomCursor />
+        {/* <AnimatedBackground /> */}
+        {/* <CustomCursor /> */}
         <Header />
         {children}
       </body>

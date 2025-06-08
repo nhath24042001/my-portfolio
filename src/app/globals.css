@@ -126,5 +126,35 @@ body {
   padding: 0;
   overflow: hidden;
   background-color: black;
-  cursor: none;
+}
+
+/* HERO STYLE */
+.--hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+#scroll-btn {
+  margin-top: 30px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  position: absolute;
+  bottom: 70px;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
 }
