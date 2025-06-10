@@ -23,7 +23,7 @@ export default function InfoSection() {
                     <a
                         href="/cv-nhat-huy.pdf"
                         download
-                        className="px-6 py-3 flex items-center border-2 border-[#FB7C6D] text-[#FB7C6D] gap-3 rounded-lg font-semibold shadow-md hover:scale-105 transition-transform duration-300"
+                        className="px-6 py-3 flex items-center border-2 border-[#FB7C6D] text-[#FB7C6D] gap-3 rounded-3xl font-semibold shadow-md hover:scale-105 transition-transform duration-300"
                     >
                         Download CV
                         <BsDownload />
