@@ -1,3 +1,5 @@
+import { FaLongArrowAltDown } from "react-icons/fa";
+
 import InfoSection from '../shared/InfoSection'
 import TechStack from '../shared/TechStack'
 
@@ -12,7 +14,10 @@ export default function Hero() {
                 <TechStack />
             </div>
 
-            <button id="scroll-btn">Scroll To Explore</button>
+            <div id="scroll-btn" className="cursor-pointer">
+                <button className="text-[#FB7C6D] cursor-pointer">Scroll To Explore</button>
+                <div className="flex items-center justify-center text-[#FB7C6D] mt-3"><FaLongArrowAltDown /></div>
+            </div>
         </section>
     )
 }
