@@ -124,13 +124,12 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: black;
 }
 
 /* HERO STYLE */
 .--hero-section {
-  height: 100vh;
+  min-height: calc(100vh - 60px);
   display: flex;
   align-items: center;
   justify-content: center;
