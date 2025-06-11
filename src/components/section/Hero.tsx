@@ -7,7 +7,7 @@ export default function Hero() {
     return (
         <section
             id='hero'
-            className="--hero-section min-h-screen flex flex-col justify-center items-start px-6 md:px-20 space-y-6 bg-black text-white z-20"
+            className="--hero-section h-screen flex flex-col justify-center items-start px-6 md:px-20 space-y-6 bg-black text-white z-20"
         >
             <div className='flex items-center'>
                 <InfoSection />
