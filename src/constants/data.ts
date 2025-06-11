@@ -6,6 +6,28 @@ export const techStack = [
   {
     name: 'Frontend',
     icon: FaCode,
+    tech: [
+      {
+        name: 'React JS',
+        image:
+          'https://images.viblo.asia/1d949589-afdd-4a1e-b77f-c53fdaf8af13.png',
+      },
+      {
+        name: 'Next JS',
+        image:
+          'https://static-00.iconduck.com/assets.00/nextjs-icon-1024x1024-5et230l7.png',
+      },
+      {
+        name: 'Angular',
+        image:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6pXQTat5xa_jxh8xM2p-AKDEXFPYgRqOI2Q&s',
+      },
+      {
+        name: 'Vue',
+        image:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW1AvoJXu1NMIvNfwIWMLEX0xp7ZyQ11RjoQ&s',
+      },
+    ],
     text: `
 // React Component with Typewriter Effect 
 import{ useState } from 'react'
@@ -28,6 +50,12 @@ return (
   {
     name: 'Backend',
     icon: GoDatabase,
+    tech: [
+      {
+        name: 'NestJS',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/a/a8/NestJS.svg',
+      },
+    ],
     text: `
  // Node.js API with Express
 import express from 'express'
